@@ -8,6 +8,9 @@
       location = "group:CrytoSwiftExample/CrytoSwiftExample.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:TargetExample/TargetExample.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:TransitionExample/TransitionExample.xcodeproj">
    </FileRef>
    <FileRef
