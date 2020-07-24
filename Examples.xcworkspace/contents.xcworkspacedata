@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:CarouselExample/CarouselExample.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:ProModule/ProModule.xcodeproj">
    </FileRef>
 </Workspace>
