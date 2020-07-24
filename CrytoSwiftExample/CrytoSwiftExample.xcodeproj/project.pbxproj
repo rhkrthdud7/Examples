@@ -1,0 +1,373 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9C6E8374246405870061E0FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6E8373246405870061E0FC /* AppDelegate.swift */; };
+		9C6E8376246405870061E0FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6E8375246405870061E0FC /* SceneDelegate.swift */; };
+		9C6E8378246405870061E0FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6E8377246405870061E0FC /* ViewController.swift */; };
+		9C6E837B246405870061E0FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C6E8379246405870061E0FC /* Main.storyboard */; };
+		9C6E837D246405880061E0FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C6E837C246405880061E0FC /* Assets.xcassets */; };
+		9C6E8380246405880061E0FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C6E837E246405880061E0FC /* LaunchScreen.storyboard */; };
+		9CD2074E24CA7E2E002552E8 /* ProModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD2074D24CA7E2E002552E8 /* ProModule.framework */; };
+		9CD2074F24CA7E2E002552E8 /* ProModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD2074D24CA7E2E002552E8 /* ProModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9CD2075024CA7E2F002552E8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9CD2074F24CA7E2E002552E8 /* ProModule.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		9C6E8370246405870061E0FC /* CrytoSwiftExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrytoSwiftExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C6E8373246405870061E0FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9C6E8375246405870061E0FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9C6E8377246405870061E0FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9C6E837A246405870061E0FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9C6E837C246405880061E0FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9C6E837F246405880061E0FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9C6E8381246405880061E0FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CD2074D24CA7E2E002552E8 /* ProModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ProModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9C6E836D246405870061E0FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CD2074E24CA7E2E002552E8 /* ProModule.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		566354336FACBC4BAD8945D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9CD2074D24CA7E2E002552E8 /* ProModule.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9C6E8367246405870061E0FC = {
+			isa = PBXGroup;
+			children = (
+				9C6E8372246405870061E0FC /* CrytoSwiftExample */,
+				9C6E8371246405870061E0FC /* Products */,
+				566354336FACBC4BAD8945D3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9C6E8371246405870061E0FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9C6E8370246405870061E0FC /* CrytoSwiftExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9C6E8372246405870061E0FC /* CrytoSwiftExample */ = {
+			isa = PBXGroup;
+			children = (
+				9C6E8373246405870061E0FC /* AppDelegate.swift */,
+				9C6E8375246405870061E0FC /* SceneDelegate.swift */,
+				9C6E8377246405870061E0FC /* ViewController.swift */,
+				9C6E8379246405870061E0FC /* Main.storyboard */,
+				9C6E837C246405880061E0FC /* Assets.xcassets */,
+				9C6E837E246405880061E0FC /* LaunchScreen.storyboard */,
+				9C6E8381246405880061E0FC /* Info.plist */,
+			);
+			path = CrytoSwiftExample;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9C6E836F246405870061E0FC /* CrytoSwiftExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C6E8384246405880061E0FC /* Build configuration list for PBXNativeTarget "CrytoSwiftExample" */;
+			buildPhases = (
+				9C6E836C246405870061E0FC /* Sources */,
+				9C6E836D246405870061E0FC /* Frameworks */,
+				9C6E836E246405870061E0FC /* Resources */,
+				9CD2075024CA7E2F002552E8 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CrytoSwiftExample;
+			productName = CrytoSwiftExample;
+			productReference = 9C6E8370246405870061E0FC /* CrytoSwiftExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9C6E8368246405870061E0FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = Soso;
+				TargetAttributes = {
+					9C6E836F246405870061E0FC = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 9C6E836B246405870061E0FC /* Build configuration list for PBXProject "CrytoSwiftExample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9C6E8367246405870061E0FC;
+			productRefGroup = 9C6E8371246405870061E0FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9C6E836F246405870061E0FC /* CrytoSwiftExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9C6E836E246405870061E0FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C6E8380246405880061E0FC /* LaunchScreen.storyboard in Resources */,
+				9C6E837D246405880061E0FC /* Assets.xcassets in Resources */,
+				9C6E837B246405870061E0FC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9C6E836C246405870061E0FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C6E8378246405870061E0FC /* ViewController.swift in Sources */,
+				9C6E8374246405870061E0FC /* AppDelegate.swift in Sources */,
+				9C6E8376246405870061E0FC /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9C6E8379246405870061E0FC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C6E837A246405870061E0FC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9C6E837E246405880061E0FC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C6E837F246405880061E0FC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9C6E8382246405880061E0FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9C6E8383246405880061E0FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9C6E8385246405880061E0FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P37C4Y6Q82;
+				INFOPLIST_FILE = CrytoSwiftExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soso.CrytoSwiftExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9C6E8386246405880061E0FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P37C4Y6Q82;
+				INFOPLIST_FILE = CrytoSwiftExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soso.CrytoSwiftExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9C6E836B246405870061E0FC /* Build configuration list for PBXProject "CrytoSwiftExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C6E8382246405880061E0FC /* Debug */,
+				9C6E8383246405880061E0FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C6E8384246405880061E0FC /* Build configuration list for PBXNativeTarget "CrytoSwiftExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C6E8385246405880061E0FC /* Debug */,
+				9C6E8386246405880061E0FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9C6E8368246405870061E0FC /* Project object */;
+}

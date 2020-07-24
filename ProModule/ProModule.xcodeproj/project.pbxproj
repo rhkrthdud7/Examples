@@ -17,6 +17,7 @@
 		9C7AD85D24C020FA00AAEBB0 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 9C7AD85C24C020FA00AAEBB0 /* RxMoya */; };
 		9C7AD86024C0212A00AAEBB0 /* MoyaSugar in Frameworks */ = {isa = PBXBuildFile; productRef = 9C7AD85F24C0212A00AAEBB0 /* MoyaSugar */; };
 		9CB525A524B05D15005CEFEA /* RxViewController in Frameworks */ = {isa = PBXBuildFile; productRef = 9CB525A424B05D15005CEFEA /* RxViewController */; };
+		9CD2074C24CA7DA0002552E8 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9CD2074B24CA7DA0002552E8 /* CryptoSwift */; };
 		9CEE727224AADBAD00F649EC /* ProModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CEE727024AADBAD00F649EC /* ProModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9CEE727A24AADBEC00F649EC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9CEE727924AADBEC00F649EC /* SnapKit */; };
 		9CEE728224AADC8D00F649EC /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 9CEE728124AADC8D00F649EC /* Then */; };
@@ -39,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CD2074C24CA7DA0002552E8 /* CryptoSwift in Frameworks */,
 				9C59C2F224B190BA00402BC5 /* ReusableKit in Frameworks */,
 				9C59C2F724B190E700402BC5 /* Differentiator in Frameworks */,
 				9C39B5B324AF27BA0003D013 /* SwiftyColor in Frameworks */,
@@ -135,6 +137,7 @@
 				9C7AD85A24C020FA00AAEBB0 /* Moya */,
 				9C7AD85C24C020FA00AAEBB0 /* RxMoya */,
 				9C7AD85F24C0212A00AAEBB0 /* MoyaSugar */,
+				9CD2074B24CA7DA0002552E8 /* CryptoSwift */,
 			);
 			productName = ProModule;
 			productReference = 9CEE726D24AADBAD00F649EC /* ProModule.framework */;
@@ -176,6 +179,7 @@
 				9CFDA61824B4166C00097BF0 /* XCRemoteSwiftPackageReference "RxGesture" */,
 				9C7AD85924C020FA00AAEBB0 /* XCRemoteSwiftPackageReference "Moya" */,
 				9C7AD85E24C0212A00AAEBB0 /* XCRemoteSwiftPackageReference "MoyaSugar" */,
+				9CD2074A24CA7DA0002552E8 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
 			);
 			productRefGroup = 9CEE726E24AADBAD00F649EC /* Products */;
 			projectDirPath = "";
@@ -455,6 +459,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		9CD2074A24CA7DA0002552E8 /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.1;
+			};
+		};
 		9CEE727824AADBEC00F649EC /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -547,6 +559,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9CB525A324B05D15005CEFEA /* XCRemoteSwiftPackageReference "RxViewController" */;
 			productName = RxViewController;
+		};
+		9CD2074B24CA7DA0002552E8 /* CryptoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9CD2074A24CA7DA0002552E8 /* XCRemoteSwiftPackageReference "CryptoSwift" */;
+			productName = CryptoSwift;
 		};
 		9CEE727924AADBEC00F649EC /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
