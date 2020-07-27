@@ -15,6 +15,7 @@
 		9CB156FB24CC66B10014BF96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CB156F924CC66B10014BF96 /* LaunchScreen.storyboard */; };
 		9CB1570424CC670B0014BF96 /* ProModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB1570324CC670B0014BF96 /* ProModule.framework */; };
 		9CB1570524CC670B0014BF96 /* ProModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB1570324CC670B0014BF96 /* ProModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9CF4B4F524CE6F510035B18F /* PagerBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF4B4F424CE6F510035B18F /* PagerBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +42,7 @@
 		9CB156FA24CC66B10014BF96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CB156FC24CC66B10014BF96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CB1570324CC670B0014BF96 /* ProModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ProModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CF4B4F424CE6F510035B18F /* PagerBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagerBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				9CB156EE24CC66B00014BF96 /* AppDelegate.swift */,
 				9CB156F024CC66B00014BF96 /* SceneDelegate.swift */,
 				9CB156F224CC66B00014BF96 /* ViewController.swift */,
+				9CF4B4F424CE6F510035B18F /* PagerBar.swift */,
 				9CB156F424CC66B00014BF96 /* Main.storyboard */,
 				9CB156F724CC66B10014BF96 /* Assets.xcassets */,
 				9CB156F924CC66B10014BF96 /* LaunchScreen.storyboard */,
@@ -167,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CB156F324CC66B00014BF96 /* ViewController.swift in Sources */,
+				9CF4B4F524CE6F510035B18F /* PagerBar.swift in Sources */,
 				9CB156EF24CC66B00014BF96 /* AppDelegate.swift in Sources */,
 				9CB156F124CC66B00014BF96 /* SceneDelegate.swift in Sources */,
 			);

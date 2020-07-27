@@ -14,8 +14,8 @@ import Then
 
 class ViewController: UIViewController {
 
-    enum Status {
-        case all, opened, closed, scheduled
+    enum Status: Int {
+        case all = 0, opened, closed, scheduled
     }
     private enum Metric {
         static let topTabBarHeight: CGFloat = 44
@@ -33,16 +33,8 @@ class ViewController: UIViewController {
     let viewNavigationBar = UIView().then {
         $0.backgroundColor = .white
     }
-    let scrollView = UIScrollView().then {
-        $0.showsHorizontalScrollIndicator = false
-    }
-    lazy var stackView = UIStackView(arrangedSubviews: [buttonAll, buttonOpened, buttonClosed, buttonScheduled]).then {
-        $0.axis = .horizontal
-        $0.alignment = .fill
-        $0.distribution = .fill
-        $0.spacing = Metric.spacing
-        $0.isLayoutMarginsRelativeArrangement = true
-        $0.directionalLayoutMargins = .init(top: 0, leading: Metric.spacing, bottom: 0, trailing: Metric.spacing)
+    lazy var pagerBar = PagerBar(subviews: buttons).then {
+        $0.backgroundColor = .clear
     }
     let buttonAll = UIButton().then {
         $0.setTitle("전체", for: .normal)
@@ -64,9 +56,7 @@ class ViewController: UIViewController {
         $0.setTitleColor(.black, for: .normal)
         $0.titleLabel?.font = .systemFont(ofSize: 15, weight: .regular)
     }
-    let viewIndicator = UIView().then {
-        $0.backgroundColor = .black
-    }
+    lazy var buttons = [buttonAll, buttonOpened, buttonClosed, buttonScheduled]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,105 +80,30 @@ class ViewController: UIViewController {
             $0.bottom.equalTo(viewSafeAreaTop.snp.bottom).offset(58)
         }
 
-        viewNavigationBar.addSubview(scrollView)
-        scrollView.snp.makeConstraints {
+        viewNavigationBar.addSubview(pagerBar)
+        pagerBar.snp.makeConstraints {
             $0.leading.trailing.equalTo(viewNavigationBar.safeAreaLayoutGuide)
             $0.bottom.equalToSuperview()
             $0.height.equalTo(Metric.topTabBarHeight)
         }
-
-        scrollView.addSubview(stackView)
-        stackView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
-            $0.height.equalToSuperview()
-        }
-        scrollView.addSubview(viewIndicator)
-
-        // indicator 초기 위치 강제로 설정
-        view.layoutIfNeeded()
-        var frame = stackView.convert(buttonAll.frame, to: scrollView)
-        frame.origin.y = Metric.topTabBarHeight - Metric.indicatorHeight
-        frame.size.height = Metric.indicatorHeight
-        viewIndicator.frame = frame
     }
 
     func setupBindings() {
-
-        let scrollView = self.scrollView
-        let stackView = self.stackView
-        let buttonAll = self.buttonAll
-        let buttonOpened = self.buttonOpened
-        let buttonClosed = self.buttonClosed
-        let buttonScheduled = self.buttonScheduled
-        let viewIndicator = self.viewIndicator
-
-        let tap = Observable.of(
-            buttonAll.rx.tap.map({ _ in Status.all }),
-            buttonOpened.rx.tap.map({ _ in Status.opened }),
-            buttonClosed.rx.tap.map({ _ in Status.closed }),
-            buttonScheduled.rx.tap.map({ _ in Status.scheduled })
+        let buttonTaps = Observable.of(
+            buttonAll.rx.tap.map({ Status.all }),
+            buttonOpened.rx.tap.map({ Status.opened }),
+            buttonClosed.rx.tap.map({ Status.closed }),
+            buttonScheduled.rx.tap.map({ Status.scheduled })
         ).merge().share()
 
-        tap
+        buttonTaps
             .bind(to: status)
             .disposed(by: disposeBag)
 
-        let tappedButton = status
+        status
             .distinctUntilChanged()
-            .map({ status -> UIButton in
-                switch status {
-                case .all: return buttonAll
-                case .opened: return buttonOpened
-                case .closed: return buttonClosed
-                case .scheduled: return buttonScheduled
-                }
-            })
-
-        tappedButton
-            .map({ $0.frame.insetBy(dx: -Metric.spacing, dy: 0) })
-            .subscribe(onNext: { scrollView.scrollRectToVisible($0, animated: true) })
+            .map({ $0.rawValue })
+            .bind(to: pagerBar.rx.currentIndex)
             .disposed(by: disposeBag)
-
-        tappedButton
-            .map({
-                var frame = stackView.convert($0.frame, to: scrollView)
-                frame.origin.y = Metric.topTabBarHeight - Metric.indicatorHeight
-                frame.size.height = Metric.indicatorHeight
-                return frame
-            })
-            .subscribe(onNext: { frame in
-                UIView.animate(withDuration: 0.3) {
-                    viewIndicator.frame = frame
-                }
-            })
-            .disposed(by: disposeBag)
-
-//        let taps = Observable.of(
-//            buttonAll.rx.tap.map({ buttonAll }),
-//            buttonOpened.rx.tap.map({ buttonOpened }),
-//            buttonClosed.rx.tap.map({ buttonClosed }),
-//            buttonScheduled.rx.tap.map({ buttonScheduled })
-//        ).merge().distinctUntilChanged().share()
-//
-//        taps
-//            .map({ $0.frame.insetBy(dx: -Metric.spacing, dy: 0) })
-//            .do(onNext: { print("buttonFrame: \($0)") })
-//            .subscribe(onNext: { scrollView.scrollRectToVisible($0, animated: true) })
-//            .disposed(by: disposeBag)
-//
-//        taps
-//            .map({
-//                var frame = stackView.convert($0.frame, to: scrollView)
-//                frame.origin.y = Metric.topTabBarHeight - Metric.indicatorHeight
-//                frame.size.height = Metric.indicatorHeight
-//                return frame
-//            })
-//            .do(onNext: { print("labelFrame: \($0)") })
-//            .subscribe(onNext: { frame in
-//                UIView.animate(withDuration: 0.3) {
-//                    viewIndicator.frame = frame
-//                }
-//            })
-//            .disposed(by: disposeBag)
     }
 }
