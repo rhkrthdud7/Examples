@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     private enum Metric {
         static let topTabBarHeight: CGFloat = 44
         static let indicatorHeight: CGFloat = 4
+        static let spacing: CGFloat = 20
     }
 
     let disposeBag = DisposeBag()
@@ -39,9 +40,9 @@ class ViewController: UIViewController {
         $0.axis = .horizontal
         $0.alignment = .fill
         $0.distribution = .fill
-        $0.spacing = 20
+        $0.spacing = Metric.spacing
         $0.isLayoutMarginsRelativeArrangement = true
-        $0.directionalLayoutMargins = .init(top: 0, leading: 20, bottom: 0, trailing: 20)
+        $0.directionalLayoutMargins = .init(top: 0, leading: Metric.spacing, bottom: 0, trailing: Metric.spacing)
     }
     let buttonAll = UIButton().then {
         $0.setTitle("전체", for: .normal)
@@ -63,7 +64,7 @@ class ViewController: UIViewController {
         $0.setTitleColor(.black, for: .normal)
         $0.titleLabel?.font = .systemFont(ofSize: 15, weight: .regular)
     }
-    let viewIndicator = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 20)).then {
+    let viewIndicator = UIView().then {
         $0.backgroundColor = .black
     }
 
@@ -144,7 +145,7 @@ class ViewController: UIViewController {
             })
 
         tappedButton
-            .map({ $0.frame.insetBy(dx: -20, dy: 0) })
+            .map({ $0.frame.insetBy(dx: -Metric.spacing, dy: 0) })
             .subscribe(onNext: { scrollView.scrollRectToVisible($0, animated: true) })
             .disposed(by: disposeBag)
 
@@ -170,7 +171,7 @@ class ViewController: UIViewController {
 //        ).merge().distinctUntilChanged().share()
 //
 //        taps
-//            .map({ $0.frame.insetBy(dx: -20, dy: 0) })
+//            .map({ $0.frame.insetBy(dx: -Metric.spacing, dy: 0) })
 //            .do(onNext: { print("buttonFrame: \($0)") })
 //            .subscribe(onNext: { scrollView.scrollRectToVisible($0, animated: true) })
 //            .disposed(by: disposeBag)
