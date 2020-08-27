@@ -20,6 +20,9 @@
       location = "group:ResponderChainExample/ResponderChainExample.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:StackViewExample/StackViewExample.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:TargetExample/TargetExample.xcodeproj">
    </FileRef>
    <FileRef
